@@ -1,42 +1,19 @@
-# jekyll-latex
+# Advent of Code
 
-<p align="center">
-    <img src="./assets/jekyll_latex_cover_art.png">
-</p>
+[Advent of Code](https://adventofcode.com/) is a web challenge based upon a advent calendar but for developers.
 
-  [![LICENSE](https://img.shields.io/github/license/mtouzot/jekyll-latex)](LICENSE.md) 
+Every day a challenge to solve.
 
+Pick up your computer and your favourite coding language and go on!
 
-## Features
-- LaTeX typography
-- Abstract, theorems, proofs, and definitions
-- MathJax
-- Google Analytics
-- Profile photo
-- Compatible with Jekyll 3.x and Github Pages
-- Responsive layout
-- Supports Jekyll's SCSS preprocessor
+You can find the daily challenge here:
 
-## Installation
-```
-git clone https://github.com/mtouzot/jekyll-latex.git
-
-bundle install
-
-# Change all relevant settings for your site in _config.yml
-
-bundle exec jekyll serve --watch
-```
-
-## Credits
-
-Based on the amazing work below:
-- https://github.com/ryanmcdermott/jekyll-latex
-- https://github.com/heiswayi/the-plain
-- https://github.com/vincentdoerig/latex-css
-
-## Licenses
-
-1. This project: MIT
-1. The Plain (of which this is based): MIT
-1. Latex CSS: MIT
+- [2015](https://adventofcode.com/2015)
+- [2016](https://adventofcode.com/2016)
+- [2017](https://adventofcode.com/2017)
+- [2018](https://adventofcode.com/2018)
+- [2019](https://adventofcode.com/2019)
+- [2020](https://adventofcode.com/2020)
+- [2021](https://adventofcode.com/2021)
+- [2022](https://adventofcode.com/2022)
+- [2023](https://adventofcode.com/2023)
