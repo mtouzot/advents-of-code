@@ -9,11 +9,12 @@ google_analytics:   UA-123
 author_name:        "Martin TOUZOT" # Your name here
 author_email:       martin.touzot@gmail.com # Your email here
 author_gravatar:    b1fb30e34362f9801f2317acde0f3838 # Your Gravatar md5 hash here for logo
+author_github:      mtouzot
 
 # Site Settings
 url:                 https://mtouzot.github.io # Change to your site
 baseurl:            /advents-of-code
-permalink:          /posts/:title # Post permalink
+permalink:          /:year/:day/:title # Post permalink
 timezone:           America/Los_Angeles # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 mathjax:            true  # enables support for mathjax - set to false to disable
 
@@ -32,7 +33,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
 
-paginate: 10
+paginate: 25
 paginate_path: "/blog/page:num/"
 
 defaults:

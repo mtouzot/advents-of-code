@@ -1,19 +1,19 @@
-# Advent of Code
+# Advents of Code
+
+<p align="center">
+    <img src="./docs/assets/big-advent-code-2015.png">
+</p>
 
 [Advent of Code](https://adventofcode.com/) is a web challenge based upon a advent calendar but for developers.
 
-Every day a challenge to solve.
+Every day a challenge to solve. No programming language imposed.
 
-Pick up your computer and your favourite coding language and go on!
+My solutions can be found [here](https://mtouzot.github.io/advents-of-code/)
 
-You can find the daily challenge here:
+## Credits & Copyright
 
-- [2015](https://adventofcode.com/2015)
-- [2016](https://adventofcode.com/2016)
-- [2017](https://adventofcode.com/2017)
-- [2018](https://adventofcode.com/2018)
-- [2019](https://adventofcode.com/2019)
-- [2020](https://adventofcode.com/2020)
-- [2021](https://adventofcode.com/2021)
-- [2022](https://adventofcode.com/2022)
-- [2023](https://adventofcode.com/2023)
+Advent of Code is only **free to use**, the [About page](https://adventofcode.com/about) answers the [copy/redistribute](https://adventofcode.com/about#faq_copying) part.
+
+Favicons can be found on <a href="https://www.flaticon.com/fr/icones-gratuites/biscuit-de-noel" title="biscuit-de-noel icônes">Freepik - Flaticon</a>
+
+The documation page hosted on Github Page is a [personnal fork](https://github.com/mtouzot/jekyll-latex.git) of Ryan McDermott's [jekyll-latex theme](https://github.com/ryanmcdermott/jekyll-latex)

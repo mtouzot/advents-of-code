@@ -133,7 +133,7 @@ h6 {
         }
 
         .gravatar {
-            margin: 5px auto;
+            margin: 0px auto;
             -webkit-border-radius: 50%;
             -moz-border-radius: 50%;
             border-radius: 50%;
@@ -180,6 +180,17 @@ h6 {
     max-width: 500px;
     margin: 0 auto;
     font-size: 1rem;
+
+    .logo {
+        border-radius: 5%;
+        height: 56px;
+        width: 56px;
+        align-items: center;
+        display: inline-block;
+        vertical-align: middle;
+        text-decoration: none;
+        margin-right: rem(10px);
+      }
 }
 
 .page-navigation {

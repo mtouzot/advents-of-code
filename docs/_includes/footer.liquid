@@ -1,4 +1,8 @@
 <div class="footer">
+  <a href="https://github.com/{{ site.author_github }}{{ site.baseurl }}" style="text-decoration:none" target="_blank">
+    <img class="logo" src="{{ site.baseurl }}/assets/github-mark-white.png?s=80">
+  </a>
+  </br>
   <span class="block">&copy;
     {% assign this_year = site.time | date: '%Y' %}
     {% if site.start_year == this_year or site.start_year == "" or site.start_year == nil %}
@@ -7,5 +11,8 @@
       {{site.start_year}} - {{ this_year }}
       {{site.start_year.blank}}
     {% endif %}
-    {{ site.author_name }}</span>
+    <a href="{{ site.url }}" target="_blank">
+    {{ site.author_name }}
+    </a>
+  </span>
 </div>
