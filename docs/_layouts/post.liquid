@@ -5,11 +5,17 @@ layout: default
 <main>
   <article>
     <div class="center">
-      <h1>{{ page.title }}</h1>
+      <h1>
+        <a
+          href="https://adventofcode.com/{{ page.date | date: "%Y"}}/day/{{ page.date | date: "%e" | strip}}"
+          target="_blank"
+          style="text-decoration:none"
+          >
+          {{ page.title }}</a>
+      </h1>
       <p class="author">
         {{ page.date | date: '%B %-d, %Y' }}
       </p>
-
     </div>
 
     <div class="divider"></div>
