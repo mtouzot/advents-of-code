@@ -1,7 +1,7 @@
 # Advents of Code
 
 <p align="center">
-    <img src="./docs/assets/big-advent-code-2015.png">
+    <img src="./assets/big-advent-code-2015.png">
 </p>
 
 [Advent of Code](https://adventofcode.com/) is a web challenge based upon a advent calendar but for developers.
