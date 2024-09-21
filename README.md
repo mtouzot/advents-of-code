@@ -1,7 +1,7 @@
 # Advents of Code
 
 <p align="center">
-    <img src="./docs/assets/big-advent-code-2015.png">
+    <img src="./assets/big-advent-code-2015.png">
 </p>
 
 [Advent of Code](https://adventofcode.com/) is a web challenge based upon a advent calendar but for developers.
@@ -13,6 +13,8 @@ My solutions can be found [here](https://mtouzot.github.io/advents-of-code/)
 ## Requirements
 
 This project will as long as possible avoid the use of external Python module.
+
+It uses [`aocd`](https://github.com/wimglenn/advent-of-code-data) module developped by [Wim Jeantine-Glenn](https://github.com/wimglenn). Don't forget do install it in a virtual environment to launch the scripts.
 
 However it will use Python >= 3.12 features. You can download it from the [official website](https://www.python.org/downloads/)
 
