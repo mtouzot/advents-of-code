@@ -50,6 +50,6 @@ def part_two():
 
 if __name__ == "__main__":
     pod = day.PuzzleOfTheDay(2015, 7)
-    wires = parse_data(pod.input_data.split("\n"))
+    wires = parse_data(pod.input_data.splitline())
     pod.submit("a", part_one())
     pod.submit("b", part_two())

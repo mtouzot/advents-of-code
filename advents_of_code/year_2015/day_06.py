@@ -108,7 +108,7 @@ def part_two(input_data: list[str],
 
 if __name__ == "__main__":
     pod = day.PuzzleOfTheDay(2015, 6)
-    input_data = pod.input_data.split("\n")
+    input_data = pod.input_data.splitline()
     square_size = 1000
     init_lights_grid = [[0] * square_size for _ in range(square_size)]
     pod.submit("a", part_one(input_data, init_lights_grid))
