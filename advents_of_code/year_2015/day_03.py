@@ -26,14 +26,14 @@ def next_visited_house(input_data,
                                   direction[way]))
         yield current_point
 
-def all_houses_visited_by_one(input_data: str):
+def part_one(input_data: str):
     start_at = (0, 0)
     reached_points = {point for point in next_visited_house(input_data,
                                                             start_at)}
     reached_points.add(start_at)
     return len(reached_points) + 1 
 
-def all_houses_visited_by_two(input_data: str):
+def part_two(input_data: str):
     start_at = (0, 0)
     santa_locations = {point for point in next_visited_house(input_data,
                                                              start_at,
@@ -49,10 +49,8 @@ def all_houses_visited_by_two(input_data: str):
 
 def main():
     pod = day.PuzzleOfTheDay(2015, 3)
-    visited_by_santa = all_houses_visited_by_one(pod.input_data)
-    visited_by_santa_and_robo = all_houses_visited_by_two(pod.input_data)
-    pod.submit("a", visited_by_santa)
-    pod.submit("b", visited_by_santa_and_robo)
+    pod.submit("a", part_one(pod.input_data))
+    pod.submit("b", part_two(pod.input_data))
 
 
 if __name__ == "__main__":

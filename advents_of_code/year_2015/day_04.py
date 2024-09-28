@@ -34,7 +34,13 @@ def validate(input_data:str,
         if hash[:zero_padding] == '0' * zero_padding:
             return value
 
+def part_one(input_data: str):
+     return validate(pod.input_data, 5)
+
+def part_two(input_data: str):
+     return validate(pod.input_data, 6)
+
 if __name__ == "__main__":
     pod = day.PuzzleOfTheDay(2015, 4)
-    pod.submit("a", validate(pod.input_data, 5))
-    pod.submit("b", validate(pod.input_data, 6))
+    pod.submit("a", part_one(pod.input_data))
+    pod.submit("b", part_two(pod.input_data))

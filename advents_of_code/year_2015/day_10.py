@@ -10,7 +10,7 @@ How to run:
     python -m advents_of_code.year_2015.day_10
 """
 
-
+@cache
 def look_and_say(input_data: str,
                  n: int = 1) -> str:
     if n == 1:
@@ -30,7 +30,13 @@ def look_and_say(input_data: str,
     res += f"{count}{prev_number}"
     return res
 
+def part_one(input_data: str):
+    return len(look_and_say(input_data, 40))
+
+def part_two(input_data: str):
+    return len(look_and_say(input_data, 50))
+
 if __name__ == "__main__":
     pod = day.PuzzleOfTheDay(2015, 10)
-    pod.submit("a", len(look_and_say(pod.input_data, 40)))
-    pod.submit("b", len(look_and_say(pod.input_data, 50)))
+    pod.submit("a", part_one(pod.input_data))
+    pod.submit("b", part_two(pod.input_data))

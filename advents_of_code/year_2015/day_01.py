@@ -17,15 +17,17 @@ def count_floors(input_data: str) -> Generator[int, None, None]:
         current_floor += direction[char]
         yield current_floor
 
+def part_one(input_data: str):
+    *_, last = count_floors(input_data)
+    return last
+
+def part_two(input_data: str):
+    return list(count_floors(input_data)).index(-1) + 1
 
 def main():
     pod = day.PuzzleOfTheDay(2015, 1)
-    first_time_in_basement = None
-    for idx, floor in enumerate(count_floors(pod.input_data)):
-        if floor == -1 and first_time_in_basement is None:
-            first_time_in_basement = idx + 1
-    pod.submit("a", floor)
-    pod.submit("b", first_time_in_basement)
+    pod.submit("a", part_one(pod.input_data))
+    pod.submit("b", part_two(pod.input_data))
 
 
 if __name__ == "__main__":

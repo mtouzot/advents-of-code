@@ -17,14 +17,16 @@ def get_all_size_combinations(input_data: list[int],
                 for seq in combinations(input_data, i)
                 if sum(seq) == max_size], key=lambda x: len(x))
 
+def part_one(input_data: list[list[int]]) -> int:
+    return len(input_data)
 
-def part_two(input_data: list[int]) -> int:
-    pass
+def part_two(input_data: list[list[int]]) -> int:
+    return sum(len(data) == len(input_data[0]) for data in input_data)
 
 if __name__ == "__main__":
     pod = day.PuzzleOfTheDay(2015, 17)
     input_data = list(map(int, pod.input_data.splitlines()))
     eggnog_exces = 150
     all_combinations = get_all_size_combinations(input_data, eggnog_exces)
-    pod.submit("a", len(all_combinations))
-    pod.submit("b", sum(len(data) == len(all_combinations[0]) for data in all_combinations))
+    pod.submit("a", part_one(all_combinations))
+    pod.submit("b", part_two(all_combinations))

@@ -11,20 +11,20 @@ How to run:
 """
     
 def parse_data(input_data) -> Generator[list[int], None, None]:
-    input_data = input_data.split("\n")
+    input_data = input_data.splitline()
     for data in input_data:
         yield sorted(list(map(int, data.split("x"))))
 
+def part_one(input_data: str):
+    return sum(2 * (l*w + l*h + w*h) + min(l*w, l*h, w*h) for l, w, h in parse_data(input_data))
+
+def part_two(input_data: str):
+    return sum(2 * l + 2 * w + l * w * h for l, w, h in parse_data(input_data))
+
 def main():
     pod = day.PuzzleOfTheDay(2015, 2)
-    first_rule_area = 0
-    second_rule_area = 0
-    for [l, w, h] in parse_data(pod.input_data):
-        area = [l*w, l*h, w*h]
-        first_rule_area += 2 * sum(area) + min(area)
-        second_rule_area += 2 * l + 2 * w + l * w * h
-    pod.submit("a", first_rule_area)
-    pod.submit("b", second_rule_area)
+    pod.submit("a", part_one(pod.input_data))
+    pod.submit("b", part_two(pod.input_data))
 
 
 if __name__ == "__main__":
