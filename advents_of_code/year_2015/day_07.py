@@ -1,6 +1,5 @@
 #!/usr/bin/python
 from .. import day
-from typing import Union
 from functools import cache
 from operator import and_, or_, lshift, rshift
 
@@ -12,6 +11,7 @@ How to run:
     python -m advents_of_code.year_2015.day_07
 """
 
+
 def parse_data(input_data: list[str]) -> dict:
     wires = {}
     for data in input_data:
@@ -19,13 +19,14 @@ def parse_data(input_data: list[str]) -> dict:
         wires[wire] = expression
     return wires
 
+
 @cache
 def compute_signal(wire_output: str):
     global wires
     operations = dict(AND=and_,
-                        OR=or_,
-                        LSHIFT=lshift,
-                        RSHIFT=rshift)
+                      OR=or_,
+                      LSHIFT=lshift,
+                      RSHIFT=rshift)
     if wire_output.isnumeric():
         return int(wire_output)
     match wires[wire_output]:
@@ -37,9 +38,11 @@ def compute_signal(wire_output: str):
             return operations[operation](compute_signal(a),
                                          compute_signal(b))
 
+
 def part_one():
     global wires
     return compute_signal("a")
+
 
 def part_two():
     global wires

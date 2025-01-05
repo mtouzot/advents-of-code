@@ -20,29 +20,36 @@ def at_least_n_voyels(word: str,
     """
     return len(re.findall(r"[aeiou]", word)) >= nb_min_voyels
 
+
 def twice_in_a_row(word: str) -> bool:
     return len(re.findall(r"(.)\s?\1", word)) > 0
 
+
 def missing_from(word: str) -> bool:
     return len(re.findall(r"(ab)|(cd)|(pq)|(xy)", word)) == 0
+
 
 def at_least_two_pairs(word: str) -> bool:
     pairs = re.findall(r"(..).*?(\1)", word)
     return len(pairs) > 0
 
+
 def at_least_one_rep_with_one_sep(word: str) -> bool:
     return len(re.findall(r"(.)(.)\1", word)) > 0
 
+
 def part_one(input_data: str):
     return sum([at_least_n_voyels(word, nb_min_voyels=3)
-                    & twice_in_a_row(word)
-                    & missing_from(word)
-                    for word in input_data])
+                & twice_in_a_row(word)
+                & missing_from(word)
+                for word in input_data])
+
 
 def part_two(input_data: str):
     return sum([at_least_two_pairs(word)
-                    & at_least_one_rep_with_one_sep(word)
-                    for word in input_data])
+                & at_least_one_rep_with_one_sep(word)
+                for word in input_data])
+
 
 if __name__ == "__main__":
     pod = day.PuzzleOfTheDay(2015, 5)

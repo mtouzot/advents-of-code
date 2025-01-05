@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from  .. import day
+from .. import day
 
 """
 Year 2015 - Day 8 : Matchsticks
@@ -13,8 +13,10 @@ How to run:
 def part_one(input_data) -> int:
     return sum(len(data) - len(eval(data)) for data in input_data)
 
+
 def part_two(input_data) -> int:
     return sum(2 + data.count("\"") + data.count("\\") for data in input_data)
+
 
 if __name__ == "__main__":
     pod = day.PuzzleOfTheDay(2015, 8)

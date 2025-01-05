@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from  .. import day
+from .. import day
 from typing import Generator
 
 """
@@ -10,6 +10,7 @@ How to run:
     python -m advents_of_code.year_2015.day_01
 """
 
+
 def count_floors(input_data: str) -> Generator[int, None, None]:
     direction = {'(': 1, ')': -1}
     current_floor = 0
@@ -17,12 +18,15 @@ def count_floors(input_data: str) -> Generator[int, None, None]:
         current_floor += direction[char]
         yield current_floor
 
+
 def part_one(input_data: str):
     *_, last = count_floors(input_data)
     return last
 
+
 def part_two(input_data: str):
     return list(count_floors(input_data)).index(-1) + 1
+
 
 def main():
     pod = day.PuzzleOfTheDay(2015, 1)

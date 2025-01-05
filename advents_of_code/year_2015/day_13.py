@@ -1,6 +1,6 @@
 #!/usr/bin/python
 from itertools import permutations, islice, tee
-from  .. import day
+from .. import day
 
 """
 Year 2015 - Day 13 : Knights of Dinner Table
@@ -19,6 +19,7 @@ def parse_data(input_data: list[str]):
         dinner_tables.setdefault(person_A, {})[person_B] = coeff[sign] * int(units)
     return dinner_tables
 
+
 def compute_happiness(input_data: dict) -> list[int]:
     sum_happiness = []
     for p in permutations(input_data):
@@ -29,8 +30,10 @@ def compute_happiness(input_data: dict) -> list[int]:
         sum_happiness.append(happiness)
     return sum_happiness
 
+
 def part_one(input_data: dict) -> int:
     return max(compute_happiness(input_data))
+
 
 def part_two(input_data: dict) -> None:
     table_with_santa = dict()
@@ -39,6 +42,7 @@ def part_two(input_data: dict) -> None:
         input_data[personn].update({"santa": 0})
     input_data |= table_with_santa
     return max(compute_happiness(input_data))
+
 
 if __name__ == "__main__":
     pod = day.PuzzleOfTheDay(2015, 13)

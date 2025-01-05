@@ -19,19 +19,22 @@ def clamp_min(lights_grid: list[int],
                 lights_grid[nrow][ncol] = min
     return lights_grid
 
+
 def clamp_max(lights_grid: list[int],
-            max: int = 1) -> list[int]:
+              max: int = 1) -> list[int]:
     for nrow in range(len(lights_grid)):
         for ncol in range(len(lights_grid[0])):
             if lights_grid[nrow][ncol] > max:
                 lights_grid[nrow][ncol] = max
     return lights_grid
 
+
 def clamp(lights_grid: list[int],
           min: int = 0,
           max: int = 1):
     lights_grid = clamp_min(lights_grid, min)
     return clamp_max(lights_grid, max)
+
 
 def add(lights_grid: list[int],
         start_point: tuple[int, int] = (0, 0),
@@ -42,6 +45,7 @@ def add(lights_grid: list[int],
             lights_grid[nrow][ncol] += step
     return lights_grid
 
+
 def toggle(lights_grid: list[int],
            start_point: tuple[int, int] = (0, 0),
            end_point:  tuple[int, int] = (0, 0)) -> list[int]:
@@ -49,6 +53,7 @@ def toggle(lights_grid: list[int],
         for ncol in range(start_point[1], end_point[1]+1):
             lights_grid[nrow][ncol] = 1 - lights_grid[nrow][ncol]
     return lights_grid
+
 
 def part_one(input_data: list[str],
              lights_grid: list[int]) -> int:
@@ -59,7 +64,7 @@ def part_one(input_data: list[str],
     """
     for command in input_data:
         start_x, start_y, end_x, end_y = [int(digit) for digit
-                                            in re.findall("\d+", command)]
+                                          in re.findall("\d+", command)]
         if "turn on" in command:
             lights_grid = add(lights_grid,
                               (start_x, start_y),
@@ -79,6 +84,7 @@ def part_one(input_data: list[str],
             lights_grid = clamp(lights_grid)
     return sum([sum(lights_grid[nrow]) for nrow in range(len(lights_grid))])
 
+
 def part_two(input_data: list[str],
              lights_grid: list[int]) -> int:
     """
@@ -87,7 +93,7 @@ def part_two(input_data: list[str],
     """
     for command in input_data:
         start_x, start_y, end_x, end_y = [int(digit) for digit
-                                            in re.findall("\d+", command)]
+                                          in re.findall("\d+", command)]
         if "turn on" in command:
             lights_grid = add(lights_grid,
                               (start_x, start_y),
@@ -105,6 +111,7 @@ def part_two(input_data: list[str],
                               (end_x, end_y),
                               2)
     return sum([sum(lights_grid[nrow]) for nrow in range(len(lights_grid))])
+
 
 if __name__ == "__main__":
     pod = day.PuzzleOfTheDay(2015, 6)

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 from functools import cache
-from  .. import day
+from .. import day
 
 """
 Year 2015 - Day 10 : Elves Look, Elves Say
@@ -9,6 +9,7 @@ Solves the December 10th 2015 Advent of Code puzzles
 How to run:
     python -m advents_of_code.year_2015.day_10
 """
+
 
 @cache
 def look_and_say(input_data: str,
@@ -30,11 +31,14 @@ def look_and_say(input_data: str,
     res += f"{count}{prev_number}"
     return res
 
+
 def part_one(input_data: str):
     return len(look_and_say(input_data, 40))
 
+
 def part_two(input_data: str):
     return len(look_and_say(input_data, 50))
+
 
 if __name__ == "__main__":
     pod = day.PuzzleOfTheDay(2015, 10)
